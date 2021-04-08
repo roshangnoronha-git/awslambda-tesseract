@@ -1,7 +1,7 @@
 # AWS-Lambda-OpenCV-Tesseract
 
 
-This Code is the final contents of the ZIP folder code to be uploaded to AWS Lambda
+This Tool uses AWS Lambda to identify the type of US Mdeical claim form.
 
 ## Installation
 
