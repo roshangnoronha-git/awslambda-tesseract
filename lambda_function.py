@@ -8,18 +8,18 @@ import pytesseract
 import numpy as np
 s3 = boto3.client('s3')
 
-#os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="abhishek.json" 
+
 def lambda_handler(event, context):
     #print("Received event: " + json.dumps(event, indent=2))
 
     # Get the object from the event and show its content type
     
-    #bucket = event['Records'][0]['s3']['bucket']['name']
+    
     key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'], encoding='utf-8')
-    #bucket = s3_resource.Bucket('medicalformsintake')
+    
     try:
     
-        bucket = "medicalformsintake"
+        bucket = "Inser_bucket_name"
         # fetching object from bucket
         file_obj = s3.get_object(Bucket=bucket, Key=key)
         # reading the file content in bytes
